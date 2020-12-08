@@ -4,8 +4,8 @@
   <div class="row">
     <form>
       <p>
-        <label for="name">Burger Name</label>
-        <input type="text" name="name" id="name">
+        <label for="burgerName">Burger Name</label>
+        <input type="text" name="burgerName" id="burgerName">
       </p>
       <p>
         <button id="addBurger">Add Burger</button>
@@ -17,7 +17,7 @@
       <h4>Burgers</h4>
       {{#each users}}
       {{#unless this.isHere}}
-      <p class="devoured" data-id="{{this.id}}">{{ this.name }}</p>
+      <p class="devoured" data-id="{{this.id}}">{{ this.burgerName }}</p>
       {{/unless}}
       {{/each}}
     </div>
@@ -25,7 +25,7 @@
       <h4>Devoured</h4>
       {{#each users}}
       {{#if this.isHere}}
-      <p class="delete" data-id="{{this.id}}">{{ this.name }}</p>
+      <p class="delete" data-id="{{this.id}}">{{ this.burgerName }}</p>
       {{/if}}
       {{/each}}
     </div>
