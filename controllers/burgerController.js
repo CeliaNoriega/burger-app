@@ -3,8 +3,8 @@ const user = require('../models/burger.js')
 
 
 router.get('/burgers', (req, res) =>
-  user.getAll(users =>
-    res.render('index', { users })))
+  user.getAll(burgers =>
+    res.render('index', { burgers })))
 
 router.post('/burgers', (req, res) =>
   user.create(req.body, () =>
