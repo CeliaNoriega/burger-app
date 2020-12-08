@@ -4,7 +4,7 @@ CREATE DATABASE burgers_db;
 
 USE burgers_db;
 
-CREATE TABLE users (
+CREATE TABLE burgers (
 	id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     burgerName VARCHAR(50) NOT NULL,
     devoured BOOL NOT NULL

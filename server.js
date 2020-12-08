@@ -10,13 +10,6 @@ app.use(express.json())
 app.engine('.hbs', require('express-handlebars')({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', '.hbs')
 
-// app.get('/', (req, res) => {
-//   res.render('index', { name: 'John Doe', age: 47 })
-// })
-
-// app.get('/jane', (req, res) => {
-//   res.render('index', { name: 'Jane Doe', age: 46 })
-// })
 
 app.use(require('./controllers'))
 
