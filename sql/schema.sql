@@ -1,0 +1,12 @@
+DROP DATABASE IF EXISTS burgers_db;
+
+CREATE DATABASE burgers_db;
+
+USE burgers_db;
+
+CREATE TABLE users (
+	id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    burgerName VARCHAR(50) NOT NULL,
+    devoured BOOL NOT NULL
+);
+
