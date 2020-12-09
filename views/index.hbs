@@ -1,20 +1,24 @@
-<h1>Eat Da Burger</h1>
+<h1 class="text-center">Eat Da Burger!</h1>
 
 <div class="container">
   <div class="row">
-    <form>
-      <p>
-        <label for="burger">Burger Name</label>
-        <input type="text" name="burger" id="burger">
-      </p>
-      <p>
-        <button id="addBurger">Add Burger</button>
-      </p>
-    </form>
+    <div class="col text-center">
+      <form>
+        <p>
+          <label class="form-label" for="burger"></label>
+          <input class="form-control text-center" type="text" name="burger" id="burger" placeholder="Insert Burger Name">
+        </p>
+        <p>
+          <button type="button" class="btn btn-dark" id="addBurger"><i class="fas fa-plus-circle"></i> Create
+            Burger</button>
+        </p>
+      </form>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-6">
-      <h4>Burgers</h4>
+      <h3>Created Burgers</h3>
+      <hr>
       {{#each burgers}}
       {{#unless this.devoured}}
       <p class="devoured" data-id="{{this.id}}">{{ this.burgerName }}</p>
@@ -22,7 +26,8 @@
       {{/each}}
     </div>
     <div class="col-md-6">
-      <h4>Devoured</h4>
+      <h3>Devoured Burgers</h3>
+      <hr>
       {{#each burgers}}
       {{#if this.devoured}}
       <p class="delete" data-id="{{this.id}}">{{ this.burgerName }}</p>
