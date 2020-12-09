@@ -16,7 +16,7 @@
     <div class="col-md-6">
       <h4>Burgers</h4>
       {{#each burgers}}
-      {{#unless this.isHere}}
+      {{#unless this.devoured}}
       <p class="devoured" data-id="{{this.id}}">{{ this.burgerName }}</p>
       {{/unless}}
       {{/each}}
@@ -24,7 +24,7 @@
     <div class="col-md-6">
       <h4>Devoured</h4>
       {{#each burgers}}
-      {{#if this.isHere}}
+      {{#if this.devoured}}
       <p class="delete" data-id="{{this.id}}">{{ this.burgerName }}</p>
       {{/if}}
       {{/each}}
